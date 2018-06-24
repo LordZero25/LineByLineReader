@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.sample.zero.linebylinereader.MainActivity">
+    <item
+        android:id="@+id/action_open"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orderInCategory="100"
+        android:title="@string/action_open" />
+    <item
+        android:id="@+id/action_encoding"
+        android:title="Encoding" />
+</menu>
