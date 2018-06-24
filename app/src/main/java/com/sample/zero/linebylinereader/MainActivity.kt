@@ -77,8 +77,13 @@ class MainActivity : AppCompatActivity() {
         btnNext.setOnClickListener {
             var temp = _currentLine + 1
 
-            while(_lines[temp].isBlank()) {
+            while(temp <= _lines.size - 1 && _lines[temp].isBlank()) {
                 temp = temp + 1
+
+                if(temp > _lines.size - 1){
+                    temp = _lines.size - 1
+                    break
+                }
             }
 
             if (_lines.size - 1 >= temp) {
@@ -97,10 +102,11 @@ class MainActivity : AppCompatActivity() {
         btnPrev.setOnClickListener {
             var temp = _currentLine - 1
 
-            while(_lines[temp].isBlank()) {
+            while(temp >= 0 && _lines[temp].isBlank()) {
                 temp = temp - 1
 
                 if(temp == 0) {
+                    temp = 0
                     break
                 }
             }
